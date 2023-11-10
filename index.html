@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Precio del trayecto</title>
+    <!-- Incluir CSS de Bulma -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="icon" type="image/png" href="/images/favicon.png">
+
+</head>
+<body>
+
+    <section class="section">
+        <div class="container">
+            <h1 class="title">Precio del trayecto</h1>
+            
+            <!-- Formulario para calcular el consumo de combustible -->
+            <div class="box">
+                <form id="fuelCalculator">
+                    <div class="field">
+                        <label class="label">Distancia del viaje (en km)</label>
+                        <div class="control">
+                            <input class="input" type="number" id="distance" placeholder="Ingresa la distancia en kilómetros">
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label class="label">Consumo medio del vehículo (l/100 km)</label>
+                        <div class="control">
+                            <input class="input" type="number" id="fuelConsumption" step="0.1" placeholder="Ingresa el consumo medio de combustible">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Precio por litro (en €)</label>
+                        <div class="control">
+                            <input class="input" type="number" id="pricePerLiter" step="0.01" placeholder="Ingresa el precio por litro">
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <div class="control">
+                            <button class="button is-primary" type="submit">Calcular</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Área para mostrar los resultados -->
+            <article class="message is-primary" id="resultMessage" style="display:none;">
+                <div class="message-header">
+                    <p>Resultado</p>
+                </div>
+                <div class="message-body" id="result">
+                    <!-- El resultado del cálculo se mostrará aquí -->
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- Incluir JavaScript al final del body para mejorar la carga de la página -->
+    <script src="calculateFuel.js"></script>
+
+</body>
+</html>

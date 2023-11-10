@@ -1,0 +1,71 @@
+/* Estilos personalizados para la Calculadora de Consumo de Combustible */
+
+/* Se asegura de que el fondo se extienda por toda la página y se centre */
+html, body {
+    height: 100%;
+    margin: 0;
+    background: url('/images/background1.png') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  
+  /* Estilos para centrar el contenido usando flexbox */
+  .section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .container {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Estilos para el título */
+  .title {
+    text-align: center;
+    margin-bottom: 2rem; /* Añade margen debajo del título */
+  }
+  
+  .title {
+    font-family: 'Arial', sans-serif; /* O cualquier otra fuente que prefieras */
+    font-weight: bold; /* Fuente en negrita */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+  }
+  
+  
+  
+  /* Estilos para el formulario y sus campos */
+  .box {
+    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1);
+    padding: 20px;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.9); /* Fondo ligeramente transparente */
+  }
+  
+  .input, .button {
+    max-width: 300px;
+    margin: 10px auto;
+  }
+  
+  .button.is-primary {
+    background-color: #0055a5;
+    color: white;
+    font-weight: bold;
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  /* Ajustes de responsividad */
+  @media (max-width: 768px) {
+    .input, .button {
+      width: 90%;
+    }
+  }
+  
